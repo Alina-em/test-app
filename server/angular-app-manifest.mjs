@@ -2,7 +2,7 @@
 export default {
   bootstrap: () => import('./main.server.mjs').then(m => m.default),
   inlineCriticalCss: true,
-  baseHref: 'https://Alina_em.github.io/test-app/',
+  baseHref: 'https://Alina-em.github.io/test-app/',
   locale: undefined,
   routes: [
   {
@@ -22,10 +22,10 @@ export default {
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 24120, hash: '359741dd1b728a1d486b4e1267b7102a176475af98e6bc5fb6929529f289abac', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 17323, hash: 'f41cb06a51399076f60c637b41a3c6346bcc139f41503cdae4a76a5975d3533a', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'index.html': {size: 59602, hash: 'd812fd8b853067c1345f8b6e615a45070628db0921521d71df5e9acb51fb2039', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
-    'account/index.html': {size: 59708, hash: '07638cb8892e4f300fee346206083f2f618cbc79e5bb72a704c8b8ce5ab16cca', text: () => import('./assets-chunks/account_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 24120, hash: '36689ce4db6e6e0b2781d6b8317cd4e29bc50ce71cde0120c89d311e9a7ebca0', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 17323, hash: '1acb8a4a53ccd34eb26f89e49257f46bb095f018d386121b585cde22f8582112', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'index.html': {size: 59602, hash: 'dac0d732879e26530646a7060c511443d90d014230b474a45a0d20b429df40f8', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'account/index.html': {size: 59702, hash: '53f4413232bd6d7594f3394b2aadebf94420f433cd9c25efcb5f3e6fccd52d7f', text: () => import('./assets-chunks/account_index_html.mjs').then(m => m.default)},
     'styles-SHXI5TM3.css': {size: 7781, hash: 'a80f+exCx6o', text: () => import('./assets-chunks/styles-SHXI5TM3_css.mjs').then(m => m.default)}
   },
 };
