@@ -1,8 +1,0 @@
-[
-    { "label": "Submitted", "isComplete": true },
-    { "label": "Review", "isComplete": true },
-    { "label": "Quote", "isComplete": true },
-    { "label": "Bind", "isComplete": true },
-    { "label": "Issue", "isComplete": true },
-    { "label": "Renew", "isComplete": false }
-  ]  
