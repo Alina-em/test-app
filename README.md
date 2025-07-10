@@ -1,25 +1,25 @@
-# 📊 Test Assignment — Layout and Interface Development
+# Test Assignment — Layout and Interface Development
 
-This is my implementation of the **Dashboard** and **Account** screens based on the provided UI screenshots.  
-The goal was to build a clean, responsive, and interactive UI using **Angular**, breaking down the layout into reusable components and managing state effectively.
+This is my implementation of the **Dashboard** and **Account** screens based on the provided UI screenshots using Angular.  
 
----
-
-## 🚀 Live Demo
-
-👉 [Deployed Application](#) — *Replace with your live hosting link*
 
 ---
 
-## 📂 Repository
+## Live Demo
 
-👉 [GitHub Repository](#) — *Replace with your repository link*
+[Deployed Application](#) — 
 
 ---
 
-## ✅ Features Implemented
+## Repository
 
-### 📌 Dashboard
+[GitHub Repository](#) — https://github.com/Alina-em/test-app.git
+
+---
+
+## Features
+
+### Dashboard
 - **Navigation Bar** with active tab highlighting.
 - **Work Queue** block with tabs and a table.
 - **Portfolio Goals** block with progress indicators.
@@ -28,7 +28,7 @@ The goal was to build a clean, responsive, and interactive UI using **Angular**,
 - **My Accounts** table with filters, triage, statuses, and color indicators.
 - **State Management:** Implemented with **NgRX** (Store + Effects) for handling the Dashboard data flow.
 
-### 📌 Account Page
+### Account Page
 - **Header** with account name and details.
 - **Performance Metrics**, **Policies**, **Account Status & Compliance**, **Winnability** (with mock graphs and recommendations).
 - **Communication** section with interactive reply buttons (*used instead of icon interactivity*).
@@ -36,7 +36,7 @@ The goal was to build a clean, responsive, and interactive UI using **Angular**,
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 - **Framework:** [Angular](https://angular.io/) `v19`
 - **State Management:** [NgRX](https://ngrx.io/) used for the Dashboard
@@ -47,7 +47,7 @@ The goal was to build a clean, responsive, and interactive UI using **Angular**,
 
 ---
 
-## 🔍 Interactivity & Responsiveness
+## Interactivity & Responsiveness
 
 - Tab switching and active state highlighting.
 - Reply buttons in the **Communication** block are interactive.
@@ -55,20 +55,18 @@ The goal was to build a clean, responsive, and interactive UI using **Angular**,
 
 ---
 
-## 🤖 AI Tools Used
+## AI Tools Used
 
-- **GPT** (ChatGPT) — used for generating boilerplate code, converting UI ideas to components, and assisting with structure planning.
+- GPT (ChatGPT).
 
----
 
-## ⚠️ Notes
+## Notes
 
-- Icons interactivity (e.g., tooltips on icon click) was replaced with reply buttons interactivity in the **Communication** section to focus on core functionality within the deadline.
-- No unit or E2E tests were implemented for this version.
+- Icons interactivity was replaced with reply buttons interactivity in the **Communication** section to focus on core functionality within the deadline.
 
 ---
 
-## 📜 How to Run Locally
+## How to Run Locally
 
 ```bash
 # Clone the repo
