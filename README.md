@@ -42,7 +42,6 @@ This is my implementation of the **Dashboard** and **Account** screens based on 
 - **State Management:** [NgRX](https://ngrx.io/) used for the Dashboard
 - **Component Library:** Angular Material
 - **Language:** TypeScript, SCSS
-- **Server-Side Rendering:** Configured with Angular SSR (optional)
 - **Build Tooling:** Angular CLI
 
 ---
@@ -57,7 +56,7 @@ This is my implementation of the **Dashboard** and **Account** screens based on 
 
 ## AI Tools Used
 
-- GPT (ChatGPT).
+- GPT 
 
 
 ## Notes
