@@ -7,7 +7,7 @@ This is my implementation of the **Dashboard** and **Account** screens based on 
 
 ## Live Demo
 
-[Deployed Application](#) — 
+[Deployed Application](#) — https://alina-em.github.io/test-app/account
 
 ---
 
