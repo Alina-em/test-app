@@ -1,0 +1,31 @@
+{
+    "summary": {
+      "overallScore": 82,
+      "winnabilitySummary": "Very Strong",
+      "historicalTrend": [
+        { "month": "Jan", "value": 65 },
+        { "month": "Feb", "value": 68 },
+        { "month": "Mar", "value": 70 },
+        { "month": "Apr", "value": 75 },
+        { "month": "May", "value": 78 },
+        { "month": "Now", "value": 82 }
+      ],
+      "position": {
+        "yourScore": 82,
+        "marketAverage": 68,
+        "topCompetitor": 88
+      }
+    },
+    "increasingWinnability": [
+      { "label": "Brokers relationship", "value": 28 },
+      { "label": "Loss history", "value": 22 },
+      { "label": "Industry growth", "value": 16 },
+      { "label": "Multiline opportunity", "value": 11 }
+    ],
+    "decreasingWinnability": [
+      { "label": "Premium pricing", "value": -24 },
+      { "label": "Total exposure", "value": -18 },
+      { "label": "Loss ratio trend", "value": -13 },
+      { "label": "Market competition", "value": -5 }
+    ]
+}

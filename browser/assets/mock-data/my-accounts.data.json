@@ -1,0 +1,67 @@
+[
+  {
+    "id": "acc-namx-001",
+    "accountNameType": "NAMEX Tech Solutions",
+    "broker": "Willis Towers",
+    "renewalDate": "04/16/2025",
+    "premium": 2.8,
+    "ratedPremium": 2.8,
+    "lossRatio": 52.8,
+    "appetite": "HIGH",
+    "status": "Active",
+    "triage": 180,
+    "winnability": "Strong"
+  },
+  {
+    "id": "acc-alnc-002",
+    "accountNameType": "Alliancxe Healthcare Systems",
+    "broker": "Aon Risk",
+    "renewalDate": "06/30/2025",
+    "premium": 1.9,
+    "ratedPremium": 1.7,
+    "lossRatio": 38.0,
+    "appetite": "MEDIUM",
+    "status": "Under review",
+    "triage": 165,
+    "winnability": "Moderate"
+  },
+  {
+    "id": "acc-mrne-003",
+    "accountNameType": "Marine Logistics Corp",
+    "broker": "Marine McLennian",
+    "renewalDate": "09/25/2025",
+    "premium": 0.92,
+    "ratedPremium": 0.92,
+    "lossRatio": 20.0,
+    "appetite": "HIGH",
+    "status": "Active",
+    "triage": 182,
+    "winnability": "Very Strong"
+  },
+  {
+    "id": "acc-grnf-004",
+    "accountNameType": "Greenfield Energy Ltd",
+    "broker": "Aon Risk",
+    "renewalDate": "07/22/2025",
+    "premium": 1.4,
+    "ratedPremium": 1.4,
+    "lossRatio": 47.0,
+    "appetite": "CAUTIOUS",
+    "status": "Under review",
+    "triage": 162,
+    "winnability": "Weak"
+  },
+  {
+    "id": "acc-qunt-005",
+    "accountNameType": "QuantumTech Industries",
+    "broker": "Willis Towers",
+    "renewalDate": "11/01/2025",
+    "premium": 3.5,
+    "ratedPremium": 3.2,
+    "lossRatio": 60.0,
+    "appetite": "HIGH",
+    "status": "Active",
+    "triage": 158,
+    "winnability": "Strong"
+  }
+]
