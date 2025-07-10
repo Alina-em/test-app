@@ -1,0 +1,118 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/utilities.scss';
+
+:host {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: -0.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.compliance-container {
+  @include frosted-container;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.compliance-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--color-text-primary);
+  font-family: 'Roboto', sans-serif;
+}
+
+.compliance-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.compliance-label {
+  font-size: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 20px;
+
+  &:hover {
+    color: #8EBFFF;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+  .compliance-container {
+    padding: 1rem;
+  }
+  .compliance-grid {
+    grid-template-columns: 1fr;
+  }
+  .compliance-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .compliance-label {
+    font-size: 0.9rem;
+  }
+  .history-link {
+    font-size: 0.85rem;
+  }
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.2rem;
+  }
+  .compliance-container {
+    padding: 0.8rem;
+  }
+  .compliance-grid {
+    gap: 0.8rem;
+  }
+  .compliance-label {
+    font-size: 0.85rem;
+  }
+}

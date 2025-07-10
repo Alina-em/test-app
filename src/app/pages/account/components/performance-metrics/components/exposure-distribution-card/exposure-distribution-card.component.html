@@ -1,0 +1,19 @@
+  <div class="exposure-distribution-content" *ngIf="exposureDistributionData() as data">
+    <h3 class="card-title">Exposure Distribution</h3>
+  
+    <div class="distribution-list">
+      @for (item of data.items; track item.category) {
+        <div class="distribution-item">
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar simple-progress">
+              <div
+                class="progress-fill simple-fill"
+                [style.width.%]="item.percentage"
+              ></div>
+            </div>
+          </div>
+          <span class="category-name">{{ item.category }}: {{ item.percentage }}%</span>
+        </div>
+      }
+    </div>
+  </div>

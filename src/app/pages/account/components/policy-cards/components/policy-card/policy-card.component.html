@@ -1,0 +1,21 @@
+<div class="policy-card">
+    @if (policy(); as p) {
+      <div class="header">
+        <img class="icon" [src]="p.iconPath" [alt]="p.type + ' icon'" />
+        <h3>{{ p.type }}</h3>
+      </div>
+  
+      <div class="details">
+        <p>Premium: {{ p.premium | number: '1.0-2' }}</p>
+        <p>
+          Eff. Date:
+          @if (p.status === 'Expired') {
+            - -
+          } @else {
+            {{ p.endDate | date: 'M/d/yyyy' }}
+          }
+        </p>
+      </div>
+    }
+  </div>
+  

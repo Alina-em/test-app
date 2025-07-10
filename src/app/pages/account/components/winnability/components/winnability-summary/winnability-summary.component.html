@@ -1,0 +1,12 @@
+<div class="summary">
+    @if (data(); as summaryData) {
+      <app-score [score]="summaryData"></app-score> 
+    }
+  
+    @if (data(); as summaryData) {
+      <app-historical-trend [trendData]="summaryData.historicalTrend"></app-historical-trend>
+    }
+    @if (data(); as summaryData) {
+      <app-position [positionData]="summaryData.position"></app-position>
+    }
+</div>

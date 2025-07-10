@@ -1,0 +1,22 @@
+<div class="header-row"> 
+    <h2 class="section-title">Compliance & Documentation</h2>
+    <a href="#" class="history-link">See history &rarr;</a>
+  </div>
+  
+  <div class="compliance-container">
+    <div class="compliance-grid">
+      @if (complianceItems(); as items) {
+        @for (item of items; track item.label) {
+          <div class="compliance-item">
+            <img
+              [src]="item.isComplete ? checkedIconPath : uncheckedIconPath"
+              [alt]="item.isComplete ? 'Checked' : 'Unchecked'"
+              class="compliance-icon"
+            >
+            <span class="compliance-label">{{ item.label }}</span>
+          </div>
+        }
+      }
+    </div>
+  </div>
+  

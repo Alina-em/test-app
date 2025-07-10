@@ -1,0 +1,15 @@
+<div class="score-card">
+    <h3 class="score-title">Overall Score</h3>
+    <div class="score-details">
+      <span class="percentage">{{ score().overallScore }}%</span>
+      <div class="rating-badge">
+        <div class="rating-circles">
+          @for (item of numberOfCircles; track $index) {
+            <span class="circle"></span>
+          }
+        </div>
+        <span class="rating-text">{{ score().winnabilitySummary }}</span>
+      </div>
+    </div>
+  </div>
+  

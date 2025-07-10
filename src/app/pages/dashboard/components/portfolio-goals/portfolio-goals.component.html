@@ -1,0 +1,77 @@
+<div class="portfolio-goals-container">
+    <div *ngIf="portfolioGoals$ | async as goals" class="goals-content">
+      <h2>Portfolio Goals</h2>
+  
+      <div class="bar-metrics">
+        <div class="bar-metric-item">
+          <div class="bar-header">
+            <div class="label">PORTFOLIO LOSS RATIO TARGET</div>
+          </div>
+          <div class="bar-value-above">{{ goals.portfolioLossRatioTarget.percentage }}</div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill loss-ratio-gradient"
+              [style.width.%]="100"
+            ></div>
+            <div
+              class="diamond-indicator"
+              [style.left.%]="goals.portfolioLossRatioTarget.targetPercentage * 100"
+            ></div>
+          </div>
+          <div class="status-text-below">{{ goals.portfolioLossRatioTarget.statusText }}</div>
+        </div>
+  
+        <div class="bar-metric-item">
+          <div class="bar-header">
+            <div class="label">RENEWAL RETENTION</div>
+          </div>
+          <div class="bar-value-above">{{ goals.renewalRetention.percentage }}</div>
+          <div class="progress-bar">
+            <div
+              class="progress-fill renewal-gradient"
+              [style.width.%]="100"
+            ></div>
+            <div
+              class="diamond-indicator"
+              [style.left.%]="goals.renewalRetention.targetPercentage * 100"
+            ></div>
+          </div>
+          <div class="status-text-below">{{ goals.renewalRetention.statusText }}</div>
+        </div>
+      </div>
+  
+      <div class="simple-metrics">
+        <div class="simple-metric-item">
+          <div class="label">NEW BUSINESS TARGET</div>
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar simple-progress">
+              <div
+                class="progress-fill simple-fill"
+                [style.width.%]="goals.newBusinessTarget.progress * 100"
+              >
+                {{ goals.newBusinessTarget.amount }}
+              </div>
+            </div>
+            <div class="target">{{ goals.newBusinessTarget.target }}</div>
+          </div>
+          <div class="bottom-percentage">{{ goals.newBusinessTarget.bottomPercentage }}</div>
+        </div>
+  
+        <div class="simple-metric-item">
+          <div class="label">ANNUAL GWP TARGET</div>
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar simple-progress">
+              <div
+                class="progress-fill simple-fill"
+                [style.width.%]="goals.annualGwpTarget.progress * 100"
+              >
+                {{ goals.annualGwpTarget.amount }}
+              </div>
+            </div>
+            <div class="target">{{ goals.annualGwpTarget.target }}</div>
+          </div>
+          <div class="bottom-percentage">{{ goals.annualGwpTarget.bottomPercentage }}</div>
+        </div>
+      </div>
+    </div>
+  </div>  

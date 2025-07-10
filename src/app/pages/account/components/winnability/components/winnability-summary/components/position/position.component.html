@@ -1,0 +1,21 @@
+<div class="position-card">
+    <h3 class="position-title">Position</h3>
+  
+    <div class="progress-bars-container">
+      @for (item of positionItems(); track item.label) {
+        <div class="progress-item">
+          <div class="progress-bar-wrapper">
+            <div class="progress-bar simple-progress">
+              <div
+                class="progress-fill simple-fill"
+                [style.width.%]="item.value"
+              ></div>
+            </div>
+          </div>
+          <span class="progress-label" [class.is-yours]="item.isYours">
+            {{ item.label }}: {{ item.value }}%
+          </span>
+        </div>
+      }
+    </div>
+  </div>

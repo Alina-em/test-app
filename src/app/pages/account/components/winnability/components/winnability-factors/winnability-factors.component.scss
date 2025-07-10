@@ -1,0 +1,114 @@
+@import '../../../../../../../styles/variables.scss';
+@import '../../../../../../../styles/utilities.scss';
+
+:host {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    color: #fff;
+    gap: 0.2rem;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 2.5rem;
+  }
+  
+  .winnability-factors-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  
+    &.increasing {
+      --accent: #34d399; // green
+    }
+  
+    &.decreasing {
+      --accent: #facc15; // yellow
+    }
+  
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+  
+      .arrow-circle {
+        @include number-circle-style; 
+      }
+  
+      .arrow-icon {
+        width: 20px;
+        height: 20px;
+        color: var(--accent);
+      }
+  
+      .title {
+        font-size: 1.7rem;
+        font-weight: 350;
+      }
+    }
+  
+    .factors-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+  
+      .factor-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+  
+        .number-circle {
+          @include number-circle-style; 
+        }
+  
+        .factor-content {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start; 
+          gap: 0.5rem;
+  
+          .label-and-bar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+  
+            .factor-label {
+              font-size: 1.2rem;
+              margin-bottom: 0.3rem;
+              font-weight: 350;
+            }
+  
+            .progress-bar {
+              height: 20px;
+              position: relative;
+  
+              .progress-fill {
+                position: relative;
+                height: 100%;   
+                display: block;
+                @include right-side-border-radius;
+  
+                &.increasing-fill {
+                  background: linear-gradient(to right, transparent, #34d399);
+                }
+                &.decreasing-fill {
+                  background: linear-gradient(to right, transparent, #facc15);
+                }
+              }
+            }
+          }
+  
+          .percentage-text {
+            position: absolute;
+            right: -4rem;
+            font-size: 1.2rem;
+            color: grey;
+            margin-left: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,39 @@
+@import '../../../../../styles/utilities.scss';
+
+
+:host {
+    display: block;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 1.5rem;
+  }
+  
+  .winnability {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include frosted-container;
+    padding: 1.5rem;
+    
+  }
+
+  .block-title {
+    font-weight: 300;
+    font-size: 4rem;
+  }
+  
+  .winnability-factors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }

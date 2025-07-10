@@ -1,0 +1,50 @@
+<div class="message-card">
+    <div class="header-section">
+      <div class="status-badge" [class.status-new]="message().status === 'NEW'">
+        {{ message().status }}
+      </div>
+      <div class="subject-info">
+        <h3 class="message-subject">{{ message().subject }}</h3>
+        @if (message().policyType) {
+          <span class="policy-type">{{ message().policyType }}</span>
+        }
+        @if (message().effectiveDate) {
+          <span class="effective-date">- {{ message().effectiveDate }}</span>
+        }
+      </div>
+    </div>
+  
+    <div class="meta-info">
+      <span class="sender">{{ message().sender }}</span>
+      <span class="date">// {{ message().date }}</span>
+    </div>
+  
+    <p class="message-body-snippet">{{ message().body }}</p>
+  
+    <div class="footer-section">
+      @if (message().attachmentsCount > 0) {
+        <button class="attachments-button"> 
+          <img [src]="attachmentIconPath()" alt="Attachments" class="attachment-icon">
+          <span>{{ message().attachmentsCount }} attachments</span>
+        </button>
+      }
+      <button class="reply-button" (click)="onReplyClick()">Reply</button>
+    </div>
+  </div>
+  
+  @if (isReplyModalOpen()) {
+    <div class="modal-overlay" (click)="closeReplyModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          <h3 class="modal-title">Reply to: {{ message().subject }}</h3>
+          <button class="modal-close-button" (click)="closeReplyModal()">X</button>
+        </div>
+        <div class="modal-body">
+          <textarea [(ngModel)]="replyMessage" placeholder="Type your reply here..." class="reply-textarea"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button class="send-reply-button" (click)="sendReply()">Reply</button>
+        </div>
+      </div>
+    </div>
+  }

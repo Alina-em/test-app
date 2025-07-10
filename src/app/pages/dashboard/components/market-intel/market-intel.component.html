@@ -1,0 +1,8 @@
+<div class="market-intelligence-container">
+    <h3>Market intelligence</h3>
+    <div class="intelligence-items" *ngIf="intelligenceItems$ | async as items">
+      <div *ngFor="let item of items" class="intelligence-item">
+        <div class="dot" [class]="'dot-' + item.color"></div> <span class="text">{{ item.text }}</span>
+      </div>
+    </div>
+  </div>

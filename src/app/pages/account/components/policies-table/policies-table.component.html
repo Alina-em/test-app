@@ -1,0 +1,104 @@
+<h2 class="page-title">Policies</h2>
+
+<div class="policies-container frosted-block">
+  <div class="controls-row">
+    <app-search-filter-group></app-search-filter-group>
+  </div>
+
+  <div class="table-scroll-wrapper">
+    <table class="policies-table">
+      <thead>
+        <tr>
+          <th class="col-line">Line</th>
+          <th class="col-eff-date">Eff. Date</th>
+          <th class="col-exp-date">Exp. Date</th>
+          <th class="col-status">Status</th>
+          <th class="col-expiring-tech">Expiring Tech</th>
+          <th class="col-expiring-premium">Expiring Premium</th>
+          <th class="col-renewal-tech">Renewal Tech</th>
+          <th class="col-renewal-premium">Renewal Premium</th>
+          <th class="col-rate-change">Rate Change</th>
+          <th class="col-loss-ratio">Loss Ratio</th>
+          <th class="col-info"></th>
+        </tr>
+      </thead>
+      <tbody>
+        @if (policies(); as policiesList) {
+          @for (policy of policiesList; track policy.id) {
+            <tr>
+              <td class="col-line">
+                <div class="line-content">
+                  <img [src]="policy.line.icon" alt="{{ policy.line.name }} Icon" class="company-icon" />
+                  <div class="company-details">
+                    <span class="company-name">{{ policy.line.name }}</span>
+                    <span class="policy-number">{{ policy.line.policyNumber }}</span>
+                  </div>
+                </div>
+              </td>
+
+              <td class="col-eff-date">{{ policy.effectiveDate }}</td>
+              <td class="col-exp-date">{{ policy.expirationDate }}</td>
+
+              <td class="col-status">
+                <div class="status-content">
+                  <div
+                    class="status-circle"
+                    [class.active]="policy.status === 'Active'"
+                    [class.pending]="policy.status === 'Pending'"></div>
+                  <span class="status-text">{{ policy.status }}</span>
+                </div>
+              </td>
+
+              <td class="col-expiring-tech">{{ formatCurrency(policy.expiringTech) }}</td>
+              <td class="col-expiring-premium">{{ formatCurrency(policy.expiringPremium) }}</td>
+              <td class="col-renewal-tech">{{ formatCurrency(policy.renewalTech) }}</td>
+              <td class="col-renewal-premium">{{ formatCurrency(policy.renewalPremium) }}</td>
+
+              <td class="col-rate-change">
+                <span [class.rate-change-red]="toNumber(policy.rateChange) > 5">
+                  {{ formatRateChange(policy.rateChange) }}
+                </span>
+              </td>
+
+              <td class="col-loss-ratio">
+                @if (isNumeric(policy.lossRatio)) {
+                  <span
+                    class="loss-ratio-pill"
+                    [class.loss-ratio-red]="toNumber(policy.lossRatio) > 70"
+                    [class.loss-ratio-green]="toNumber(policy.lossRatio) <= 40"
+                    [class.loss-ratio-yellow]="toNumber(policy.lossRatio) > 40 && toNumber(policy.lossRatio) <= 70">
+                    {{ toNumber(policy.lossRatio) }}%
+                  </span>
+                } @else {
+                  <span class="loss-ratio-na">{{ policy.lossRatio }}</span>
+                }
+              </td>
+
+              <td class="col-info">
+                <img [src]="infoIconPath" alt="Info" class="info-icon" />
+              </td>
+            </tr>
+          }
+        }
+      </tbody>
+
+      <tfoot>
+        <tr class="totals-row">
+          <td class="col-line"></td>
+          <td class="col-eff-date"></td>
+          <td class="col-exp-date"></td>
+          <td class="col-status">TOTAL ({{ totalPoliciesCount() }})</td>
+          <td class="col-expiring-tech">{{ formatCurrency(totalExpiringTech()) }}</td>
+          <td class="col-expiring-premium">{{ formatCurrency(totalExpiringPremium()) }}</td>
+          <td class="col-renewal-tech">{{ formatCurrency(totalRenewalTech()) }}</td>
+          <td class="col-renewal-premium">{{ formatCurrency(totalRenewalPremium()) }}</td>
+          <td class="col-rate-change total-rate-change">5.9%</td>
+          <td class="col-loss-ratio total-loss-ratio">
+            <span class="loss-ratio-pill loss-ratio-yellow">58.3%</span>
+          </td>
+          <td class="col-info"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

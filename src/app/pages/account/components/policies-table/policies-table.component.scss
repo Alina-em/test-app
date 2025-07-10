@@ -1,0 +1,297 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/utilities.scss';
+
+:host {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.policies-container {
+  @include frosted-container;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.controls-row {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: flex-start;
+
+  app-search-filter-group {
+    flex-grow: 1;
+    max-width: 300px;
+  }
+}
+
+.table-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.policies-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 1000px;
+}
+
+thead th {
+  text-align: left;
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  white-space: nowrap;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02); // lighter every second row
+}
+
+.col-line { width: 18%; }
+.col-eff-date, .col-exp-date { width: 10%; }
+.col-status { width: 10%; }
+.col-expiring-tech, .col-expiring-premium,
+.col-renewal-tech, .col-renewal-premium { width: 12%; text-align: right; }
+.col-rate-change, .col-loss-ratio { width: 8%; text-align: center; }
+.col-info { width: 4%; text-align: center; }
+
+.line-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.company-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.company-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.company-name {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.policy-number {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.status-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.status-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-circle.active {
+  background-color: var(--color-success);
+}
+
+.status-circle.pending {
+  background-color: var(--color-warning);
+}
+
+.status-text {
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+}
+
+.rate-change-red {
+  color: rgb(144, 18, 18);
+  font-weight: 500;
+}
+
+.loss-ratio-pill {
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loss-ratio-green {
+  background-color: var(--color-success);
+  color: #fff;
+}
+
+.loss-ratio-yellow {
+  background-color: var(--color-warning);
+  color: #000;
+}
+
+.loss-ratio-red {
+  background-color: rgb(159, 29, 29);
+  color: #fff;
+}
+
+.loss-ratio-na {
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+}
+
+.info-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.totals-row {
+  font-weight: 500;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.totals-row td {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-primary);
+}
+
+.totals-row .col-status {
+  font-weight: 600;
+}
+
+.totals-row .total-rate-change,
+.totals-row .total-loss-ratio {
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .policies-table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .policies-table {
+    min-width: 700px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .company-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .policy-number {
+    font-size: 0.7rem;
+  }
+
+  .status-circle {
+    width: 8px;
+    height: 8px;
+  }
+
+  .status-text {
+    font-size: 0.8rem;
+  }
+
+  .loss-ratio-pill {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .info-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .totals-row td {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  thead th,
+  tbody td {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .company-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .policy-number {
+    font-size: 0.65rem;
+  }
+
+  .status-circle {
+    width: 7px;
+    height: 7px;
+  }
+
+  .status-text {
+    font-size: 0.75rem;
+  }
+
+  .loss-ratio-pill {
+    padding: 0.15rem 0.4rem;
+    font-size: 0.7rem;
+  }
+
+  .info-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .totals-row td {
+    font-size: 0.8rem;
+  }
+}

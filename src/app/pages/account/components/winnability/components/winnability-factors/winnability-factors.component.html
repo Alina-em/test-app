@@ -1,0 +1,37 @@
+<div class="winnability-factors-card" [class.increasing]="isIncreasing()" [class.decreasing]="!isIncreasing()">
+    <div class="header">
+      <div class="arrow-circle">
+        <svg viewBox="0 0 24 24" class="arrow-icon">
+          <path [attr.d]="currentArrowIconPath()" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <h3 class="title">{{ title() }}</h3>
+    </div>
+  
+    <div class="factors-list">
+      @for (factor of factors(); track $index) {
+        <div class="factor-item">
+          <div class="number-circle">
+            <span>{{ $index + 1 }}</span>
+          </div>
+          <div class="factor-content">
+            <div class="label-and-bar">
+              <span class="factor-label">{{ factor.label }}</span>
+              <div class="progress-bar-wrapper">
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill"
+                    [class.increasing-fill]="isIncreasing()"
+                    [class.decreasing-fill]="!isIncreasing()"
+                    [style.width.%]="Math.abs(factor.value)"
+                  >
+                    <span class="percentage-text">{{ formatPercentage(factor.value) }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>  

@@ -1,0 +1,13 @@
+<h2 class="section-title">Communication</h2>
+
+<div class="communication-container">
+  <app-search-filter-group></app-search-filter-group>
+
+  <div class="messages-grid">
+    @if (messages(); as msgs) {
+      @for (message of msgs; track message.id) {
+        <app-message-card [message]="message" [attachmentIconPath]="attachmentIconPath"></app-message-card>
+      }
+    }
+  </div>
+</div>

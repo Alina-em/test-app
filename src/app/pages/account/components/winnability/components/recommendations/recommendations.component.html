@@ -1,0 +1,18 @@
+<div class="recommendations-card">
+    <div class="header">
+      <img [src]="rocketIconPath" alt="AI Icon" class="header-icon">
+      <h3 class="title">AI-Powered Recommendations</h3>
+    </div>
+  
+    <div class="recommendations-list">
+      @for (rec of recommendations(); track $index) {
+        <div class="recommendation-item">
+          <div class="recommendation-content"> 
+            <p class="recommendation-title">{{ rec.title }}</p>
+            <p class="recommendation-description">{{ rec.description }}</p>
+          </div>
+          <button class="apply-button">{{ rec.actionLabel }}</button>
+        </div>
+      }
+    </div>
+  </div>

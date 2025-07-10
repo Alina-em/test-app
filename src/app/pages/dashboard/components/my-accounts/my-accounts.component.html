@@ -1,0 +1,59 @@
+<div class="accounts-container">
+  <h3>My accounts</h3>
+  <div class="accounts-table-wrapper" *ngIf="accountItems$ | async as accounts">
+    <div class="accounts-header">
+      <div class="header-item">ACCOUNT NAME/TYPE</div>
+      <div class="header-item">BROKER</div>
+      <div class="header-item">RENEWAL DATE</div>
+      <div class="header-item">PREMIUM</div>
+      <div class="header-item">RATED PREMIUM</div>
+      <div class="header-item">LOSS RATIO</div>
+      <div class="header-item">APPETITE</div>
+      <div class="header-item">STATUS</div>
+      <div class="header-item">TRIAGE</div>
+      <div class="header-item">WINNABILITY</div>
+    </div>
+    <div class="accounts-body">
+      <div class="account-row" *ngFor="let account of accounts">
+        <div class="row-item account-name">{{ account.accountNameType }}</div>
+        <div class="row-item">{{ account.broker }}</div>
+        <div class="row-item">{{ account.renewalDate }}</div>
+        <div class="row-item premium">{{ account.premium | currency:'USD':'symbol':'1.1-1' }}M</div>
+        <div class="row-item rated-premium">{{ account.ratedPremium | currency:'USD':'symbol':'1.1-1' }}M</div>
+
+        <div 
+          class="row-item loss-ratio"
+          [class]="'loss-ratio-' + account.appetite.toLowerCase()"
+        >
+          {{ account.lossRatio | number:'1.1-1' }}%
+        </div>
+
+        <div 
+          class="row-item appetite"
+          [class]="'appetite-' + account.appetite.toLowerCase()"
+        >
+          {{ account.appetite }}
+        </div>
+
+        <div class="row-item status" [class]="{
+          'status-active': account.status.toLowerCase() === 'active',
+          'status-under-review': account.status.toLowerCase() === 'under review'
+        }">
+          {{ account.status }}
+        </div>
+
+        <div class="row-item triage">
+          <span class="triage-pill">{{ account.triage }}</span>
+        </div>
+
+        <div class="row-item winnability">
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="circle"></span>
+          <span class="winnability-label">{{ account.winnability }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

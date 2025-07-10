@@ -1,0 +1,20 @@
+<div class="historical-trend-card">
+    <h3 class="trend-title">Historical trend</h3>
+  
+    <div class="chart-container">
+      <svg viewBox="0 0 280 100" class="trend-chart">
+        <polyline
+          [attr.points]="linePoints()"
+          fill="none"
+          stroke="var(--color-accent)"
+          stroke-width="2"
+        />
+      </svg>
+      <div class="month-labels">
+        @for (month of monthLabels(); track $index) {
+          <span class="month-label">{{month}}</span>
+        }
+      </div>
+    </div>
+  </div>
+  

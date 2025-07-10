@@ -1,0 +1,99 @@
+@import '../../../../../../../../../styles/variables.scss';
+
+:host {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.score-card {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.score-title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.score-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.percentage {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.rating-circles {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .score-card {
+    padding: 1rem;
+  }
+  .percentage {
+    font-size: 2rem;
+  }
+  .rating-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .circle {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .score-card {
+    padding: 0.8rem;
+  }
+  .percentage {
+    font-size: 1.8rem;
+  }
+  .rating-badge {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.75rem;
+  }
+  .circle {
+    width: 6px;
+    height: 6px;
+  }
+}

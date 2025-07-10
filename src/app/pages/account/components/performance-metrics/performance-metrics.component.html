@@ -1,0 +1,10 @@
+<div class="performance-metrics-container" *ngIf="performanceMetricsData() as metrics">
+    <h2 class="section-title">Performance Metrics</h2>
+  
+    <div class="metrics-grid">
+      <app-metric-card [metricData]="metrics.winnability" class="metric-card" />
+      <app-metric-card [metricData]="metrics.lossRatio" class="metric-card" />
+      <app-metric-card [metricData]="metrics.premiumGrowth" class="metric-card" />
+      <app-exposure-distribution-card [exposureDistributionData]="metrics.exposureDistribution" class="metric-card" />
+    </div>
+  </div>  

@@ -1,0 +1,8 @@
+<h2 class="section-title">Policies</h2>
+<div class="policy-cards-container">
+    <div class="cards-grid">
+      @for (policy of policies(); track policy.policyNumber) {
+        <app-policy-card [policy]="policy"></app-policy-card>
+      }
+    </div>
+</div>

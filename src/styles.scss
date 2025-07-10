@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import './styles/variables';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+.ar {
+  background: linear-gradient(
+      #1E40AF,
+      rgba(30, 64, 175, 0.3)
+    ) !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

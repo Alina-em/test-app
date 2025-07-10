@@ -1,0 +1,42 @@
+@import '../../../styles/utilities.scss';
+@import '../../../styles/utilities.scss';
+
+:host {
+    display: block;
+    padding: 2rem;
+  }
+
+  .frosted-block {
+    @include frosted-container;
+    padding: 1.5rem 2rem;
+  }
+  
+  .account-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    .status-compliance {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+  
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    :host {
+      padding: 1rem;
+    }
+  
+    .frosted-block {
+      padding: 1rem 1.2rem;
+    }
+  
+    .account-page {
+      gap: 1.5rem;
+    }
+  }  

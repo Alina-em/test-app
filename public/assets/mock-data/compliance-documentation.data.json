@@ -1,0 +1,19 @@
+[
+    {
+      "label": "KYC verification",
+      "isComplete": true
+    },
+    {
+      "label": "Required Documentation",
+      "isComplete": true
+    },
+    {
+      "label": "Regulatory approval",
+      "isComplete": true
+    },
+    {
+      "label": "Financial Verification",
+      "isComplete": true
+    }
+  ]
+  

@@ -1,0 +1,23 @@
+@import '../../../styles/variables.scss';
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--color-bg);
+    box-shadow: var(--box-shadow);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  
+    .greeting {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+  
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }

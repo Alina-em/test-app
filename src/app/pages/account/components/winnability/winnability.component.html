@@ -1,0 +1,26 @@
+<h2 class="section-title">Account Details</h2>
+
+<div class="winnability frosted-block">
+    <h1 class="block-title">Winnability</h1>
+  @if (winnabilityData(); as data) {
+    <app-winnability-summary [data]="data.summary"></app-winnability-summary>
+
+    <div class="winnability-factors">
+      <app-winnability-factors
+        [title]="'Increasing Winnability'"
+        [factors]="data.increasingWinnability"
+        [type]="'increasing'">
+      </app-winnability-factors>
+
+      <app-winnability-factors
+        [title]="'Decreasing Winnability'"
+        [factors]="data.decreasingWinnability"
+        [type]="'decreasing'">
+      </app-winnability-factors>
+    </div>
+  }
+
+  @if (recommendationsData(); as recs) {
+    <app-recommendations [recommendations]="recs"></app-recommendations>
+  }
+</div>

@@ -1,0 +1,48 @@
+[
+    {
+      "policyNumber": "POL-00123",
+      "type": "Marine Cargo",
+      "premium": 625000,
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "status": "Active",
+      "iconPath": "/assets/policy-icons/marine-cargo.svg"
+    },
+    {
+      "policyNumber": "POL-00456",
+      "type": "General Liability",
+      "premium": 175000,
+      "startDate": "2024-05-01",
+      "endDate": "2025-04-30",
+      "status": "Pending",
+      "iconPath": "/assets/policy-icons/general-liability.svg"
+    },
+    {
+      "policyNumber": "POL-00789",
+      "type": "Workers Comp",
+      "premium": 75000,
+      "startDate": "2023-06-01",
+      "endDate": "2024-05-31",
+      "status": "Expired",
+      "iconPath": "/assets/policy-icons/workers-comp.svg"
+    },
+    {
+      "policyNumber": "POL-01011",
+      "type": "Property",
+      "premium": 64829.83,
+      "startDate": "2024-03-15",
+      "endDate": "2025-03-14",
+      "status": "Active",
+      "iconPath": "/assets/policy-icons/property.svg"
+    },
+    {
+      "policyNumber": "POL-01213",
+      "type": "Umbrella",
+      "premium": 275000,
+      "startDate": "2024-07-01",
+      "endDate": "2025-06-30",
+      "status": "Active",
+      "iconPath": "/assets/policy-icons/umbrella.svg"
+    }
+  ]
+  

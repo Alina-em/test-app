@@ -1,0 +1,17 @@
+<h2 class="section-title">Account Status</h2>
+<div class="account-status">
+    @if (statuses()) {
+      @for (step of statuses()!; track $index) {
+        <div class="status-item" [class.completed]="step.isComplete">
+          <div class="icon-wrapper">
+            @if (step.isComplete) {
+              <img [src]="checkedIconPath" alt="Checked" class="status-icon complete-icon">
+            } @else {
+              <img [src]="uncheckedIconPath" alt="Unchecked" class="status-icon circle-icon">
+            }
+          </div>
+          <span class="status-label">{{ step.label }}</span>
+        </div>
+      }
+    }
+  </div>

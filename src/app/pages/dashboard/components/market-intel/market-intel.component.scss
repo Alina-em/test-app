@@ -1,0 +1,58 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/utilities.scss';
+
+:host {
+  display: block;
+}
+
+.market-intelligence-container {
+  @include frosted-container;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--color-text-primary);
+}
+
+.intelligence-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.intelligence-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+
+  .dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 0.3rem;
+  }
+
+  .dot-orange {
+    background-color: var(--color-dot-orange, #FF9800);
+  }
+
+  .dot-green {
+    background-color: var(--color-dot-green, #4CAF50);
+  }
+
+  .dot-red {
+    background-color: var(--color-dot-red, #F44336);
+  }
+
+  .text {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.3;
+  }
+}

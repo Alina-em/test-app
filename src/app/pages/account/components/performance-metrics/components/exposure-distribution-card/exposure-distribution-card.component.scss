@@ -1,0 +1,113 @@
+@import '../../../../../../../styles/variables.scss';
+
+@import '../../../../../../../styles/utilities.scss';
+
+:host {
+    display: block;
+    width: 100%;
+  }
+  
+  .exposure-distribution-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--color-text-primary);
+    margin: 0 0 1rem 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .distribution-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex-grow: 1;
+  }
+  
+  .distribution-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 1;
+  }
+  
+  .category-name {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--color-text-primary);
+  }
+  
+  .percentage-value {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+  
+  .progress-bar-wrapper {
+    width: 100px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  
+  .progress-bar.simple-progress {
+    @include right-side-border-radius;
+    flex: 1;
+    position: relative;
+    height: 1.3rem;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+  
+  .progress-fill.simple-fill {
+    @include right-side-border-radius;
+    height: 100%;
+    background: linear-gradient(to right, rgba(60, 116, 255, 0.1), #6A97FF);
+    transition: width 0.5s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .card-title {
+      font-size: 0.9rem;
+    }
+  
+    .category-name,
+    .percentage-value {
+      font-size: 0.85rem;
+    }
+  
+    .progress-bar.simple-progress {
+      height: 7px;
+    }
+  
+    .distribution-list {
+      gap: 0.5rem;
+    }
+
+  }
+  
+  @media (max-width: 480px) {
+    .card-title {
+      font-size: 0.85rem;
+    }
+  
+    .category-name,
+    .percentage-value {
+      font-size: 0.8rem;
+    }
+  
+    .progress-bar.simple-progress {
+      height: 6px;
+    }
+  
+    .distribution-list {
+      gap: 0.4rem;
+    }
+  
+  }

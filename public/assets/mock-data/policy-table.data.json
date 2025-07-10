@@ -1,0 +1,70 @@
+[
+    {
+      "id": "pol-001",
+      "line": {
+        "name": "Marine Cargo",
+        "icon": "/assets/policy-icons/marine-cargo.svg",
+        "policyNumber": "1703212"
+      },
+      "effectiveDate": "6/30/2026",
+      "expirationDate": "6/30/2027",
+      "status": "Active",
+      "expiringTech": 587500,
+      "expiringPremium": 605000,
+      "renewalTech": 610000,
+      "renewalPremium": 625000,
+      "rateChange": 3.3,
+      "lossRatio": 22
+    },
+    {
+      "id": "pol-002",
+      "line": {
+        "name": "General Liability",
+        "icon": "/assets/policy-icons/general-liability.svg",
+        "policyNumber": "463292"
+      },
+      "effectiveDate": "6/30/2026",
+      "expirationDate": "6/30/2027",
+      "status": "Active",
+      "expiringTech": 160000,
+      "expiringPremium": 165000,
+      "renewalTech": 170000,
+      "renewalPremium": 175000,
+      "rateChange": 6.1,
+      "lossRatio": 55
+     },
+    {
+      "id": "pol-003",
+      "line": {
+        "name": "Workers Comp",
+        "icon": "/assets/policy-icons/workers-comp.svg",
+        "policyNumber": "0182371"
+      },
+      "effectiveDate": "Pending",
+      "expirationDate": "Pending",
+      "status": "Pending",
+      "expiringTech": 0,
+      "expiringPremium": 0,
+      "renewalTech": 73500,
+      "renewalPremium": 75000,
+      "rateChange": "N/A",
+      "lossRatio": "N/A"
+    },
+    {
+      "id": "pol-004",
+      "line": {
+        "name": "Umbrella",
+        "icon": "/assets/policy-icons/umbrella.svg",
+        "policyNumber": "5274936"
+      },
+      "effectiveDate": "13/03/2026",
+      "expirationDate": "13/03/2027",
+      "status": "Active",
+      "expiringTech": 245000,
+      "expiringPremium": 250000,
+      "renewalTech": 267500,
+      "renewalPremium": 275000,
+      "rateChange": 10.0,
+      "lossRatio": 79
+    }
+  ]  

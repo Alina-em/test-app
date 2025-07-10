@@ -1,0 +1,23 @@
+@import '../../../styles/variables.scss';
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #2A2A3D;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 0.75rem;
+  
+    .search-input {
+      background: none;
+      border: none;
+      color: var(--color-text-primary);
+      padding: 0.25rem 0.5rem;
+      outline: none;
+      width: 150px;
+  
+      &::placeholder {
+        color: var(--color-text-secondary);
+      }
+    }
+  }
+  

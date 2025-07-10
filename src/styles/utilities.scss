@@ -1,0 +1,23 @@
+@mixin frosted-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+  }
+
+  @mixin right-side-border-radius { 
+    border-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  @mixin number-circle-style {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-size: 0.9rem;
+  }

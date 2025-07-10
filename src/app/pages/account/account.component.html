@@ -1,0 +1,23 @@
+<div class="account-page">
+  <app-account-header
+    *ngIf="accountDetails()"
+    [accountDetails]="accountDetails()"
+    class="frosted-block">
+  </app-account-header>
+
+  <app-performance-metrics></app-performance-metrics>
+  <app-policy-cards></app-policy-cards>
+
+  <div class="status-compliance">
+    <div>
+      <app-account-status></app-account-status>
+    </div>
+    <div>
+      <app-complience-and-docs></app-complience-and-docs>
+    </div>
+  </div>
+
+  <app-winnability></app-winnability>
+  <app-communication></app-communication>
+  <app-policies-table></app-policies-table>
+</div>

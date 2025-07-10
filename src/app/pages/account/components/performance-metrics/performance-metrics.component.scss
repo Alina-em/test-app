@@ -1,0 +1,60 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/utilities.scss';
+
+:host {
+    display: block;
+  }
+  
+  .performance-metrics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .metric-card {
+    @include frosted-container;
+
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.3rem;
+    }
+  
+    .metrics-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .metric-card {
+      padding: 1rem 1.2rem;
+    //   height: 160px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.2rem;
+    }
+
+  }

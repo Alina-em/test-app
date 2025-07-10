@@ -1,0 +1,39 @@
+<div class="account-header-container" *ngIf="accountDetails() as details">
+    @let general = details.general;
+  
+    <div class="header-main-content">
+      <div class="logo-name-group">
+        <div class="logo">
+          <img [src]="general.logoPath" />
+        </div>
+  
+        <div class="account-info">
+          <h1 class="account-name">{{ general.accountName }}</h1>
+          <div class="address-and-details">
+            <div class="address-group">
+              <p class="address">{{ general.addressLine1 }}</p>
+              <p class="address">{{ general.addressLine2 }}</p>
+            </div>
+  
+            <div class="additional-details-group">
+              <div class="detail-block">
+                <span class="label">EXISTING ACCOUNT</span>
+                <span class="value">{{ general.existingAccountNum }}</span>
+              </div>
+              <div class="separator"></div>
+              <div class="detail-block">
+                <span class="label">BROKER</span>
+                <span class="value">{{ general.broker }}</span>
+              </div>
+              <div class="separator"></div>
+              <div class="detail-block">
+                <span class="label">UNDERWRITER</span>
+                <span class="value">{{ general.underwriter }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

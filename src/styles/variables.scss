@@ -1,0 +1,25 @@
+$color-bg: #0C0C1E;
+$color-text-primary: #FFFFFF;
+$color-text-secondary: #A0A0B2;
+$color-accent: #3C74FF;
+$color-success: #00C46C;
+$color-warning: #FFCC00;
+$color-danger: #FF3B30;
+$color-status-new: #4CAF50;
+$color-status-read: rgba(189, 189, 189, 0.2);
+
+$progrees-bar-background: rgba(255, 255, 255, 0.1);
+$progrees-bar-gradient: linear-gradient(to right, rgba(60, 116, 255, 0.1), #6A97FF);
+
+:root {
+  --color-bg: #{$color-bg};
+  --color-text-primary: #{$color-text-primary};
+  --color-text-secondary: #{$color-text-secondary};
+  --color-accent: #{$color-accent};
+  --color-success: #{$color-success};
+  --color-warning: #{$color-warning};
+  --color-danger: #{$color-danger};
+
+  --border-radius: 20px;
+  --box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}

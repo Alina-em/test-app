@@ -1,0 +1,64 @@
+<div class="work-queue">
+    <div class="header">
+      <h2>Work Queue</h2>
+      <div class="tabs">
+        <button
+        [class.active]="selectedTab === 'assigned tasks'"
+        (click)="selectTab('assigned tasks')"
+        >
+        Assigned to me {{assignedTasks()}}
+        </button>
+        <button
+        [class.active]="selectedTab === 'pending review'"
+        (click)="selectTab('pending review')"
+        >
+        Pending Review {{pendingReview()}}
+        </button>
+        <button
+        [class.active]="selectedTab === 'referrals'"
+        (click)="selectTab('referrals')"
+        >
+        Referrals {{referrals()}}
+        </button>
+      </div>
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>Originator</th>
+          <th>Client/Line</th>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="workQueue$ | async as workQueue">
+         <tr *ngFor="let item of workQueue">
+            <td>
+                <span class="originator">
+                 <span class="ar">{{item.initials}}</span>
+              {{item.originator}}
+                 </span>
+             </td>
+            <td>{{item.clientLine}}</td>
+            <td>{{item.type}}</td>
+            <td>
+             <span class="status">
+                  <span class="dot"
+                [class]="{
+                  'new': item.status === 'New',
+                  'pending': item.status === 'Pending Review',
+                  'completed': item.status === 'Completed'
+                }">
+                </span>
+              {{item.status}}
+            </span>
+            </td>
+          <td> {{item.created}} </td>
+        </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>  

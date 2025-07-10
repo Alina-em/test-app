@@ -1,0 +1,114 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/utilities.scss';
+
+:host {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.account-status {
+    @include frosted-container;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  flex: 1;
+  min-width: 80px;
+
+  &:not(:first-child)::before { 
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: -55%;
+    width: 85%; 
+    height: 2px;
+    background-color: transparent;
+    border-top: 1px dashed rgb(189, 189, 189);
+    z-index: 0;
+  }
+
+
+  &.completed::before {
+    border-top: 1px dashed var(--color-success); 
+  }
+}
+
+
+.icon-wrapper {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .status-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+}
+
+.status-label {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .account-status {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .status-item {
+    min-width: 70px;
+    &:not(:first-child)::before {
+      top: 10px;
+      left: -50%;
+      width: 100%;
+    }
+  }
+
+  .icon-wrapper {
+    width: 20px;
+    height: 20px;
+    .status-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .status-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-status {
+    gap: 0.5rem;
+  }
+  .status-item {
+    min-width: 60px;
+  }
+  .status-label {
+    font-size: 0.7rem;
+  }
+}
