@@ -61,7 +61,7 @@ This is my implementation of the **Dashboard** and **Account** screens based on 
 
 ## Notes
 
-- Icons interactivity was replaced with reply buttons interactivity in the **Communication** section to focus on core functionality within the deadline.
+- Icons interactivity was replaced with reply buttons interactivity in the **Communication** section
 
 ---
 
